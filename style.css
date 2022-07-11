@@ -1,0 +1,131 @@
+*
+{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/*----------------------------------------------------------------- */
+/* FONTS
+/*----------------------------------------------------------------- */
+
+/* Poppins
+----------------------------------------- */
+@font-face
+{
+	font-family: 'Poppins';
+	font-weight: 300;
+	font-style: normal;
+
+	font-display: swap;
+	src: url('/fonts/poppins-v20-latin-ext_latin-regular.woff2') format('woff2');
+}
+
+/* ----------------------------------------------------- 
+*\ GLOBAL STYLES \*
+----------------------------------------------------- */ 
+:root
+{
+	--border-radius__default: 14px;
+
+/* COLORS
+    ----------------------------------------- */
+	--color__black: #000;
+	--color__black-light: #262626;
+	--color__black-lighter: #393939;
+	--color__black_rgb: 0, 0, 0;
+	--color__blue: #304ffd;
+	--color__grey: #f7f7f7;
+	--color__grey-dark: #c6c8cf;
+	--color__grey-light: #ecedee;
+	--color__red: #bd1404;
+	--color__white: #fff;
+	--color__yellow: #f9b200;
+
+/* FONTS
+	----------------------------------------- */
+	--font-family__default: 'Poppins', sans-serif;
+	--font-size__default: clamp(1.4rem, 1.6vw, 1.6rem);
+	--font-size__rem-constant: 62.5%;
+	--font-weight__normal: 300;
+
+/* ANIMATIONS
+	    ----------------------------------------- */
+	--transition-delay__default: 0.5s;
+}
+
+html
+{
+	font-size: var(--font-size__rem-constant);
+	line-height: normal;
+
+	position: relative;
+
+	box-sizing: border-box;
+	min-height: 100%;
+}
+
+body
+{
+	font-family: var(--font-family__default);
+	font-size: var(--font-size__default);
+	font-weight: var(--font-weight__normal);
+
+	transition: var(--transition-delay__default);
+	text-align: left;
+
+	color: var(--color__black);
+	background: var(--color__grey);
+}
+
+.container
+{
+	position: relative;
+
+	height: inherit;
+	margin: 0 auto;
+}
+
+/* IMG
+	----------------------------------------- */
+img
+{
+	display: block;
+
+	max-width: 100%;
+	height: auto;
+}
+
+/* ICON
+	----------------------------------------- */
+.icon
+{
+	display: inline-block;
+}
+
+/* BUTTONS
+	----------------------------------------- */
+button
+{
+	cursor: pointer;
+	transition: var(--transition-delay__default);
+
+	border: none;
+	background-color: var(--color__white);
+}
+
+button:focus
+{
+	outline: none;
+}
+
+/* FORMS
+----------------------------------------- */
+input,
+input:focus,
+select,
+select:focus
+{
+	border: none;
+	outline: none;
+}
